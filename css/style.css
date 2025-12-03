@@ -178,3 +178,23 @@ textarea {
     justify-content: center;
 
 }
+
+/* отключение функции наведения на мобилках */
+@media (any-hover:hover) {
+    .btn:hover {
+        opacity: 1;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    gap: 10px 24px;
+    /* // также работает justify-content align-items */
+}
+
+.grid__item {
+    height: 300px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
