@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +20,7 @@
         Заголовок h1
     </h1> -->
 
-    <form action="" method="post">
+    <!-- <form action="" method="post"> -->
         <!-- <input required placeholder="Текстовая подсказка" name="name" type="text">
         <input required readonly name="email" type="email" value="123@mail.ru">
         <input name="phone" type="tel">
@@ -79,19 +82,52 @@
         <audio controls src="">
 
         </audio> -->
-        
+    <div data-aos="fade-up" class="slider">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+        <!-- анимация появления     фото на весь экран   -->
+    <a data-aos="fade-up" data-aos-delay="10000" data-fancybox="gallery" href="img.png">
+        <img src="img.png" alt="">
+    </a>
+    <a data-fancybox="gallery" href="img.png">
+        <img src="img.png" alt="">
+    </a>
+    <a data-fancybox="gallery" href="img.png">
+        <img src="img.png" alt="">
+    </a>
+    
 
 
-    </form>
 
 
 
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
-
-
-
-
-
+    <!-- скрипт скрола картин -->
+    <script>
+        $('.slider').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+    </script>
 
     
 </body>
